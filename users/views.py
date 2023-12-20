@@ -83,7 +83,7 @@ def get_filtered_trip_data(request):
         df = pd.read_csv(csv_file_path, encoding='euc-kr', header=0)
 
         if tourist_spot:  # 관광지명으로 필터링
-            filtered_data = df[df['관광지명'].str.contains(tourist_spot, case=False)][['지역분류', '관광지명', '설명']]
+            filtered_data = df[df['관광지명']==tourist_spot][['지역분류', '관광지명', '설명']]
         elif region:  # 지역 분류에 따라 필터링
             filtered_data = df[df['지역분류'] == region][['지역분류', '관광지명', '설명']]
         else:  # region이 없을 경우 랜덤으로 10개의 데이터 선택
