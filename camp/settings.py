@@ -94,9 +94,9 @@ WSGI_APPLICATION = 'camp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AICAMP',
+        'NAME': '',
         'USER': 'root',
-        'PASSWORD': 'seal',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
